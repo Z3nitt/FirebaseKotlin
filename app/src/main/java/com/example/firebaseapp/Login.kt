@@ -20,6 +20,7 @@ class Login : AppCompatActivity() {
 
         setup()
     }
+
     private fun setup() {
         title = "Login"
         var btnSignUp = findViewById<Button>(R.id.btnSignUp)
@@ -31,10 +32,11 @@ class Login : AppCompatActivity() {
         btnSignUp.setOnClickListener {
             if (etEmail.text.isNotEmpty() && etPwd.text.isNotEmpty()) {
                 FirebaseAuth.getInstance()
-                    .createUserWithEmailAndPassword(etEmail.text.toString(), etPwd.text.toString()).addOnCompleteListener {
-                        if (it.isSuccessful){
-                            showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
-                        }else{
+                    .createUserWithEmailAndPassword(etEmail.text.toString(), etPwd.text.toString())
+                    .addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            showHome(it.result?.user?.email ?: "", ProviderType.USUARIO)
+                        } else {
                             showAlertPWD()
                         }
                     }
@@ -44,17 +46,19 @@ class Login : AppCompatActivity() {
         btnLogin.setOnClickListener {
             if (etEmail.text.isNotEmpty() && etPwd.text.isNotEmpty()) {
                 FirebaseAuth.getInstance()
-                    .signInWithEmailAndPassword(etEmail.text.toString(), etPwd.text.toString()).addOnCompleteListener {
-                        if (it.isSuccessful){
-                            showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
-                        }else{
+                    .signInWithEmailAndPassword(etEmail.text.toString(), etPwd.text.toString())
+                    .addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            showHome(it.result?.user?.email ?: "", ProviderType.USUARIO)
+                        } else {
                             showAlert()
                         }
                     }
             }
         }
     }
-    private fun showAlert(){
+
+    private fun showAlert() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
         builder.setMessage("Usuario No Registrado")
@@ -63,7 +67,7 @@ class Login : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showAlertPWD(){
+    private fun showAlertPWD() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
         builder.setMessage("La contraseña tiene que tener al menos 6 caracteres")
@@ -72,12 +76,21 @@ class Login : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showHome(email: String, provider: ProviderType){
-        val homeIntent = Intent(this, MainActivity::class.java).apply {
+    private fun showHome(email: String, provider: ProviderType) {
+        val homeIntent = Intent(this, Home::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
         }
         startActivity(homeIntent)
+
+    }
+
+    private fun paramprofile(email: String, provider: ProviderType) {
+        val profileintent = Intent(this, ThirdFragment::class.java).apply {
+            putExtra("email", email)
+            putExtra("provider", provider.name)
+        }
+        //startActivity(profileintent)
     }
 }
 
