@@ -1,5 +1,6 @@
 package com.example.firebaseapp
 
+
 import android.content.res.Resources
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
