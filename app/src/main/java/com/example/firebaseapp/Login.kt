@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
+import com.example.firebaseapp.ProviderType
 
 class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
