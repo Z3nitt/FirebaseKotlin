@@ -75,7 +75,7 @@ class FirstFragment : Fragment(), SensorEventListener {
         if (p0?.sensor?.type == Sensor.TYPE_STEP_DETECTOR) {
             puntos += 1  // Sumar un punto por cada paso detectado
             actualizarPuntos()
-            Log.d("StepDetector", "Paso detectado! Puntos actuales: $puntos")  // Ver en Logcat
+            Log.d("StepDetector", "funca: $puntos")  // Ver en Logcat
         }
     }
 
