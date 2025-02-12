@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="@color/fondos_azulcelest">
 
+    <!-- Contenedor principal -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -16,39 +17,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- Logo de la aplicación -->
+        <ImageView
+            android:layout_width="169dp"
+            android:layout_height="163dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Logo de la aplicación"
+            android:src="@drawable/logo" />
+
+        <!-- Campo de texto para el email -->
         <TextView
             android:id="@+id/tvEmailregistro"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Email" />
+            android:layout_height="48dp"
+            android:text="Email"
+            android:textColor="@color/textos_azulosc"
+            android:textSize="16sp"
+            android:background="@color/fondos_beige"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"/>
 
+        <!-- Espacio entre campos -->
         <Space
             android:layout_width="match_parent"
-            android:layout_height="8dp" />
+            android:layout_height="16dp" />
 
+        <!-- Campo de texto para el tipo de usuario -->
         <TextView
             android:id="@+id/tvprovider"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Tipo de Usuario" />
+            android:layout_height="48dp"
+            android:text="Tipo de Usuario"
+            android:textColor="@color/textos_azulosc"
+            android:textSize="16sp"
+            android:background="@color/fondos_beige"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"/>
 
+        <!-- Espacio entre campos -->
         <Space
             android:layout_width="match_parent"
-            android:layout_height="8dp" />
+            android:layout_height="24dp" />
 
-        <LinearLayout
+        <!-- Botón de cerrar sesión -->
+        <Button
+            android:id="@+id/btnCerrar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:background="@color/botones_naranja"
+            android:text="Cerrar Sesión"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
 
-            <Button
-                android:id="@+id/btnCerrar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
-                android:text="Cerrar Sesión"
-                android:textColor="@color/white" />
-
-        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

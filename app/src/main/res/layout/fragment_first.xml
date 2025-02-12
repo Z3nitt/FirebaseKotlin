@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".FirstFragment"
+    android:background="@color/fondos_beige">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,9 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:background="@android:color/holo_blue_dark"
-            android:text="Cantidad de puntos: 5500"
-            android:textColor="@android:color/white"
+            android:background="@color/textos_azulosc"
+            android:text="Nº de puntos: 5500"
+            android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold"
             android:gravity="center" />
@@ -28,7 +29,8 @@
             android:layout_height="match_parent"
             android:padding="8dp"
             android:clipToPadding="false"
-            android:scrollbars="vertical" />
+            android:scrollbars="vertical"
+            android:background="@color/fondos_azulcelest" />
 
     </LinearLayout>
 </FrameLayout>

@@ -26,8 +26,8 @@ class Login : AppCompatActivity() {
         title = "Login"
         var btnSignUp = findViewById<Button>(R.id.btnSignUp)
         var btnLogin = findViewById<Button>(R.id.btnLogin)
-        var etEmail = findViewById<EditText>(R.id.etEmail)
-        var etPwd = findViewById<EditText>(R.id.etPwd)
+        var etEmail = findViewById<EditText>(R.id.tvEmailregistro)
+        var etPwd = findViewById<EditText>(R.id.tvPwdregistro)
 
 
         btnSignUp.setOnClickListener {

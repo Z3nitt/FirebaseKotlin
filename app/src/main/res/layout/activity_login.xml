@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/fondos_azulcelest"
+    tools:context=".Login">
 
+    <!-- Contenedor principal -->
     <LinearLayout
-        android:id="@+id/tvEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -18,54 +20,82 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/etEmail"
+        <!-- Logo de la aplicación -->
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:ems="10"
+            android:layout_height="441dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/logo" />
+
+        <!-- Campo de texto para el email -->
+        <EditText
+            android:id="@+id/tvEmailregistro"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/fondos_beige"
+            android:gravity="center_vertical"
             android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:textColorHint="@color/textos_azulosc"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/textos_azulosc" />
 
+        <!-- Espacio entre campos -->
         <Space
             android:layout_width="match_parent"
             android:layout_height="8dp" />
 
+        <!-- Campo de texto para la contraseña -->
         <EditText
-            android:id="@+id/etPwd"
+            android:id="@+id/tvPwdregistro"
             android:layout_width="match_parent"
-            android:layout_height="53dp"
+            android:layout_height="40dp"
+            android:textColorHint="@color/textos_azulosc"
             android:ems="10"
+            android:background="@color/fondos_beige"
+            android:gravity="center_vertical"
             android:hint="Contraseña"
-            android:inputType="textPassword" />
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/textos_azulosc"
+            android:inputType="textPassword"/>
 
+        <!-- Espacio entre campos -->
         <Space
             android:layout_width="match_parent"
             android:layout_height="8dp" />
 
-        <LinearLayout
+        <!-- Botón de login -->
+        <Button
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:text="Acceder"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_marginTop="16dp" />
 
-            <Button
-                android:id="@+id/btnSignUp"
-                android:layout_width="189dp"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:text="Registrar"
-                android:textColor="@color/black" />
+        <!-- Espacio entre botones -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
 
-            <Space
-                android:layout_width="8dp"
-                android:layout_height="wrap_content" />
+        <!-- Botón de registro -->
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_oval"
+            android:text="Registrar"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
 
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="189dp"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
-                android:text="Acceder"
-                android:textColor="@color/white" />
-        </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

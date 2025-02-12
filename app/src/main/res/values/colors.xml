@@ -11,4 +11,10 @@
     <color name="colorPrimaryDark">#2C384A</color>
     <color name="colorAccent">#F57C00</color>
     <color name="background">#ECEFF1</color>
+    <color name="fondos_azulcelest">#A8DADC</color>
+    <color name="textos_azulosc">#457B9D</color>
+    <color name="botones_naranja">#E76F51</color>
+    <color name="resalto_amarillo">#F4A261</color>
+    <color name="fondos_beige">#F1E8D9</color>
+    <color name="indicadores_verde">#2A9D8F</color>
 </resources>

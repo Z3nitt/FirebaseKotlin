@@ -4,38 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
-
+    tools:context=".Home"
+    android:background="@color/fondos_beige">
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/purple_500"
+        android:backgroundTint="@color/textos_azulosc"
         app:tabTextColor="@color/white"
-        app:tabIndicatorColor="@color/white"
-        android:id="@+id/tab_layout">
+        app:tabIndicatorColor="@color/resalto_amarillo">
 
         <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rewards"/>
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Home"/>
+            android:text="Rewards" />
 
         <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile"/>
+            android:text="Home" />
 
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile" />
 
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/view_pager"
-        android:background="@color/teal_200"
-        android:layout_below="@id/tab_layout"/>
+        android:layout_below="@id/tab_layout"
+        android:background="@color/fondos_azulcelest" />
+
 </RelativeLayout>
